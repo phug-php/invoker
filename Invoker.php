@@ -107,7 +107,7 @@ class Invoker implements InvokerInterface
             $filteredQueue = new ListenerQueue();
 
             foreach ($queue as $invokable) {
-                if (!in_array($invokable, $invokables, true)) {
+                if (!in_array($invokable, $invokables)) {
                     $filteredQueue->insert($invokable, 0);
                 }
             }
